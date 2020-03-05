@@ -1,0 +1,9 @@
+<div class="card" style="width: 40rem;">
+  <div class="card-body">
+    <h1 class="card-text"><%= email.objet %></h1>
+    <h3 class="card-text"><%= email.body %></h3>
+    <br>
+    <%= link_to "Supprimer", email_path(email.id), method: "delete", :class => "btn btn-danger", remote: true%>
+    <button type="button" class="btn btn-info">Marquer comme non lu</button>
+  </div>
+</div>

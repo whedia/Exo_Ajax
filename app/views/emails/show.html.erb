@@ -1,0 +1,26 @@
+<div class="container">
+
+   <div class="form">
+  <%= form_tag(emails_path, method: :post, class: "form", remote: true) do %>
+  
+    <%= submit_tag 'recevoir un email', :name => 'commit', :class => "btn btn-success"%>
+  <% end %>
+</div><br><br>
+ 
+  <div class="row">
+    <div class="col-sm">
+      Liste des emails
+      <ul>
+      <% @emails.each do |email| %>
+        <li><%=link_to email.objet, email_path(email.id) %></b></li>
+    <% end %>
+      </ul> 
+    </div>
+    <div class="col-sm">
+      
+      <h1><%= @email.objet %></h1>
+      <h3><%= @email.body %></h3>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,4 @@
+document.getElementById("show").innerHTML = "<%= j render 'destroy', email: @email %>";
+console.log(document.getElementById("objet-id-<%=@email.id%>"))
+document.getElementById("objet-id-<%=@email.id%>").remove()
+
